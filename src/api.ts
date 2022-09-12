@@ -17,7 +17,7 @@ export const fetchCharacter = async (id: number) => {
   return(
   axios.get(
     `https://finalspaceapi.com/api/v0/character/${id}`
-  ).then(data => {return data})
+  ).then(data => {return data.data})
   .catch(err => console.log('Error', err ))
   )
 };
