@@ -23,7 +23,7 @@ button {
   height: 40px;
   border-radius: 10px;
   border: 0;
-  background: black;
+  background: blue;
   color: white;
   padding: 0 10px;
   cursor: pointer;
@@ -57,7 +57,7 @@ useEffect(() => {
       {isLoading ? (
         <p>Loading...</p>
       ):(<>
-<BackgroundCard name={character.name} imgUrl={character.img_url}/>
+<BackgroundCard name={character.name} imgUrl={character.img_url} gender={character.gender}/>
 <button onClick={() => setCharacterId(Math.floor(Math.random() * 10) + 1)}>
   Random Character
 </button>

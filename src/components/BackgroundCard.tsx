@@ -1,4 +1,4 @@
-import { styled, Card } from '@mui/material'
+import { styled, Card, CardMedia, Typography } from '@mui/material'
 import React from 'react'
 
 const FlashCard = styled(Card)`
@@ -29,8 +29,14 @@ type Props = {
 const BackgroundCard: React.FC<Props> = ({ name, imgUrl}) => {
   return (
     <FlashCard>
-      <p>{name}</p>
-      <p>{imgUrl}</p>
+      <Typography variant="h4" >{name}</Typography>
+   
+      <CardMedia 
+      component="img"
+      height="194"
+      image={imgUrl}
+      alt="Loading..."/>
+     
     </FlashCard>
   )
 }
